@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "futbol Nacional"
+    },
+    {
+        "id": 2,
+        "name": "futbol Internacional"
+    },
+    {
+        "id": 3,
+        "name": "Boxeo"
+    },
+    {
+        "id": 4,
+        "name": "Tenis"
+    },
+    {
+        "id": 5,
+        "name": "Rugby"
+    },
+    {
+        "id": 6,
+        "name": "Basket"
+    }
+]
