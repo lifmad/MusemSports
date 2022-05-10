@@ -3,9 +3,9 @@ const router = express.Router();
 const productsController = require('../controllers/productsController');
 
 /*  Ruta para listar productos   */
-router.get('/', productsController.getAll);
+router.get('/detalle', productsController.detail);
 /*  Ruta parametrizada   */
-router.get('/detalle/:id', productsController.getOne)
+router.get('/carrito', productsController.cart)
 
 
 

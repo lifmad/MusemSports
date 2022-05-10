@@ -53,5 +53,16 @@
         "projectId": 5,
         "discount": 15,
         "stock": true 
+    },
+    {
+        "id": 6,
+        "name": "Otros",
+        "price": 11000,
+        "description": "Casco",
+        "categoryId": 6,
+        "image": "rugby6.jpg",
+        "projectId": 6,
+        "discount": 15,
+        "stock": true 
     }
 ]

@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 3000;
 const indexRouter = require('./routes/indexRouter');
 const productsRouter = require('./routes/productsRouter');
 const projectsRouter = require('./routes/projectsRouter');
+const usersRouter = require('./routes/usersRouter');
 
 app.use(express.static(path.join(__dirname, '../public')));
 
@@ -25,6 +26,7 @@ app.set('view engine', 'ejs');
 app.use('/', indexRouter); //Home - Contact
 app.use('/productos', productsRouter);  //Listado, detalles
 app.use('/emprendimientos', projectsRouter);  // Proyectos - Emprendimientos
+app.use('/users', usersRouter);  // Proyectos - Emprendimientos
 /* app.get('/productCart', (req, res) => {res.sendFile(path.join(__dirname, '/views/productCart.html'))});
 app.get('/login', (req, res) => {res.sendFile(path.join(__dirname, '/views/login.html'))});
 app.get('/register', (req, res) => {res.sendFile(path.join(__dirname, '/views/register.html'))}); */
