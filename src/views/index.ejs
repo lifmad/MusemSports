@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/50f42a1530.js" crossorigin="anonymous"></script>
-    <title>home</title>
+    <title><%= titulo %></title>
     <link rel="shortcut icon" href="/images/favicon.jpeg" type="image/x-icon">
     <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
@@ -69,23 +69,27 @@
 
         <section >
             <div class="index__box-section">
-                <article class="index__box-article">
-                    <a href="/productDetail">
-                        <div>
-                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
-                        </div>
-                        <div class="index__box-descripcion">
-                            <div class="index__precio-descuento">
-                                <p class="index__precio">$10000</p>
-                                <p class="index__descuento">10% OFF</p>
+                <% productos.forEach(producto => { %>
+                    
+                    <article class="index__box-article">
+                        <a href="/productDetail">
+                            <div>
+                                <img class="index__image" src="/images/Imagenes/<%= producto.image %>" alt="">
                             </div>
-                            <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                            <h5 class="index__descripcion">Copa Mundial </h5>
-                        </div>
-                    </a>
-                </article>
+                            <div class="index__box-descripcion">
+                                <p><%= producto.name %></p>
+                                <div class="index__precio-descuento">
+                                    <p class="index__precio">$ <%= producto.price %></p>
+                                    <p class="index__descuento"><%= producto.discount %>% OFF</p>
+                                </div>
+                                <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
+                                <h5 class="index__descripcion"><%= producto.description %></h5>
+                            </div>
+                        </a>
+                    </article>
+                <% }) %>
             
-                <article class="index__box-article">
+                <!-- <article class="index__box-article">
                     <a href="/productDetail">
                         <div>
                             <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
@@ -147,7 +151,7 @@
                             <h5 class="index__descripcion">Copa Mundial </h5>
                         </div>
                     </a>
-                </article>
+                </article> -->
             </div>
         </section>
         

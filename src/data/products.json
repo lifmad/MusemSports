@@ -5,7 +5,7 @@
         "price": 10000,
         "description": "De Maradona 1994",
         "categoryId": 1,
-        "image": "img.jpg",
+        "image": "rugby6.jpg",
         "projectId": 1,
         "discount": 10,
         "stock": true 
@@ -16,7 +16,7 @@
         "price": 12000,
         "description": "Mundial 1994",
         "categoryId": 2,
-        "image": "img.jpg",
+        "image": "rugby6.jpg",
         "projectId": 2,
         "discount": 5,
         "stock": true 
@@ -27,7 +27,7 @@
         "price": 15000,
         "description": "Raqueta",
         "categoryId": 3,
-        "image": "img.jpg",
+        "image": "rugby6.jpg",
         "projectId": 3,
         "discount": 15,
         "stock": true 
@@ -38,7 +38,7 @@
         "price": 14000,
         "description": "Guantes",
         "categoryId": 4,
-        "image": "img.jpg",
+        "image": "rugby6.jpg",
         "projectId": 4,
         "discount": 20,
         "stock": true 
@@ -49,7 +49,7 @@
         "price": 11000,
         "description": "Casco",
         "categoryId": 5,
-        "image": "img.jpg",
+        "image": "rugby6.jpg",
         "projectId": 5,
         "discount": 15,
         "stock": true 
