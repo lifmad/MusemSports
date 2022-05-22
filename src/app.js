@@ -1,4 +1,5 @@
 const express = require('express');
+const { readdirSync } = require('fs');
 const path = require('path');
 const app = express();
 const process = require('process');
@@ -14,6 +15,8 @@ const projectsRouter = require('./routes/projectsRouter');
 const usersRouter = require('./routes/usersRouter');
 
 app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
 
 /*    Views setup    */
 app.set('views', path.join(__dirname, 'views'));
@@ -26,7 +29,7 @@ app.set('view engine', 'ejs');
 app.use('/', indexRouter); //Home - Contact
 app.use('/productos', productsRouter);  //Listado, detalles
 app.use('/emprendimientos', projectsRouter);  // Proyectos - Emprendimientos
-app.use('/users', usersRouter);  // Proyectos - Emprendimientos
+app.use('/usuarios', usersRouter);  // Proyectos - Emprendimientos
 /* app.get('/productCart', (req, res) => {res.sendFile(path.join(__dirname, '/views/productCart.html'))});
 app.get('/login', (req, res) => {res.sendFile(path.join(__dirname, '/views/login.html'))});
 app.get('/register', (req, res) => {res.sendFile(path.join(__dirname, '/views/register.html'))}); */

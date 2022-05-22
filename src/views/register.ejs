@@ -13,22 +13,22 @@
                 <button href="#" class="btn-log-facebook btn">Registrate con Facebook</button>
                 <button href="#" class="btn-log-google btn">Registrate con Google</button>
             </div>
-            <form class="container-form" action="" method="">
+            <form class="container-form" action="/usuarios/registro" method="post">
                 <div class="container-date">
                     <div class="input-container">
                         <input class="input-log" type="text" class="input-style" name="name" placeholder="Ingresa tu Nombre completo">
                         <input class="input-log" type="email" class="input-style" name="email" placeholder="Ingresa tu Email">
                     </div>
                     <div class="input-container">
-                        <input class="input-log" type="pass" class="input-style" name="password" placeholder="Crea tu contraseña">
-                        <input class="input-log" type="pass" name="password" placeholder="Reingresa tu contraseña">
+                        <input class="input-log" type="password" class="input-style" name="password" placeholder="Crea tu contraseña">
+                        <input class="input-log" type="password" name="password2" placeholder="Reingresa tu contraseña">
                     </div>
                 </div>
                 <p class="conditions"><input type="checkbox" name="check" id="check">Acepta los <span
                         href="#">Términos
                         y Condiciones</span></p>
                 <button type="submit" class="btn btn-log">Registrarse</button>
-                <p class="account-exists">¿Ya tenes cuenta? <a class="log-in" href="/users/inicioSesion">Inicia sesión aquí</a></p>
+                <p class="account-exists">¿Ya tenes cuenta? <a class="log-in" href="/usuarios/inicioSesion">Inicia sesión aquí</a></p>
     
             </form>
         </section>
