@@ -8,11 +8,11 @@ const PORT = process.env.PORT || 3000;
 
 
 /*   Enrutadores    */
-
 const indexRouter = require('./routes/indexRouter');
 const productsRouter = require('./routes/productsRouter');
 const projectsRouter = require('./routes/projectsRouter');
 const usersRouter = require('./routes/usersRouter');
+const adminRouter = require('./routes/adminRouter')
 
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.urlencoded({extended: false}));
@@ -30,6 +30,7 @@ app.use('/', indexRouter); //Home - Contact
 app.use('/productos', productsRouter);  //Listado, detalles
 app.use('/emprendimientos', projectsRouter);  // Proyectos - Emprendimientos
 app.use('/usuarios', usersRouter);  // Proyectos - Emprendimientos
+app.use('/admin', adminRouter);  // Admin, ABM Productos, ABM Proyectos
 /* app.get('/productCart', (req, res) => {res.sendFile(path.join(__dirname, '/views/productCart.html'))});
 app.get('/login', (req, res) => {res.sendFile(path.join(__dirname, '/views/login.html'))});
 app.get('/register', (req, res) => {res.sendFile(path.join(__dirname, '/views/register.html'))}); */
