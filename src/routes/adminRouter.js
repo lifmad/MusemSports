@@ -12,5 +12,18 @@ router.get('/', adminController.index);
 router.get('/productos', adminProductsController.list);
 
 /*    GET - Agregar producto   */
-router.get('/productos/agregar', adminProductsController.productAdd)
+router.get('/productos/agregar', adminProductsController.productAdd);
+
+/*    POST - Crea un producto en la DB   */
+router.post('/productos', adminProductsController.productCreate)
+
+/*    GET - Editar producto   */
+router.get('/productos/editar/:id', adminProductsController.productEdit);
+
+/*    PUT - Actualiza producto en la DB   */
+router.put('/productos/:id', adminProductsController.productUpdate);
+
+/*    DELETE - Elimina un producto   */
+router.delete('/productos/eliminar/:id', adminProductsController.productDelete)
+
 module.exports = router;
