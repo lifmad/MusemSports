@@ -7,7 +7,8 @@ const adminProductsController = require('../controllers/admin/adminProductsContr
 /*  GET - Index  */
 router.get('/', adminController.index);
 
-/*    CRUD Productos   */
+/*    CRUD PRODUCTOS   */
+
 /*    GET - Lista de productos   */
 router.get('/productos', adminProductsController.list);
 
