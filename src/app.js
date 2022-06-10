@@ -6,6 +6,7 @@ const process = require('process');
 require('dotenv').config()
 const PORT = process.env.PORT || 3000;
 const methodOverride = require('method-override');
+const multer = require('multer');
 
 
 /*   Enrutadores    */
