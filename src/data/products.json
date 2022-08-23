@@ -1,1 +1,12 @@
-[{"id":1,"name":"Botines de Messi","description":"Usado en el mundial de Rusia 2018","price":15000,"discount":12,"image":"image.jpg","sport":"futbol-Internacional","category":"destacados"},{"id":2,"name":"balon","description":"muindial","price":14000,"discount":10,"image":"image.jpg","sport":"futbol-Internacional","category":"ofertas"},{"id":3,"name":"teclado","description":"aamundial","price":16000,"discount":5,"image":"image.jpg","sport":"Tenis","category":"ofertas"}]
+[
+    {
+        "id": 1,
+        "name": "Botines de Messi",
+        "description": "Usado en el mundial de Rusia 2018",
+        "price": 15000,
+        "discount": 12,
+        "image": "image.jpg",
+        "sport": "futbol-Internacional",
+        "category": "destacados"
+    }
+]

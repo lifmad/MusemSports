@@ -43,7 +43,7 @@ main.productAdd .register_form .get_log {
     max-width: 350px;
     margin-bottom: 15px;
     border: none;
-    background-color: #D6D6D6;
+    background-color: #ffffff;
     display: block;
 }
 main.productAdd .register_form .get_log:focus {

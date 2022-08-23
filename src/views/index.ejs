@@ -1,294 +1,321 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('./partials/head', {title: 'Homepage'}) %> 
+<%- include('./partials/head', {title: 'Homepage' }) %>
 
-<body>
-    <%- include('./partials/header') %> 
-    
-    <main class="index-box">
+  <body class="index-container">
+    <%- include('./partials/header') %>
+      <main class="index_box">
+        <div class="banner">
+          <!-- Slideshow container -->
+          <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="/images/Maradona_banner.jpg" style="width:100%">
+              <div class="text">Maradona Mundial 94'</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="/images/messi-cr7_banner.jpg" style="width:100%">
+              <div class="text">Cristiano & Messi</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="/images/rugby_banner.jpg" style="width:100%">
+              <div class="text">Rugby argentino</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+
+          <!-- The dots/circles -->
+          <div class="dot_box">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+        <!--    Products    -->
         
-            <div class="main__box-carrousel">
-                <img class="main__carrousel" src="/images/Imagenes/voley3.jpg" alt="">
-            </div>
-        
-        <h4>Productos destacados</h4>
+        <section class="items_box">
+          
+          <div class="titles_box">
+            <h3 class="title_items">Lo mas visto</h3>
+            <a class="button_items_all" href="">Mostrar <br> todo</a>
+          </div>
 
-        <section >
-            <div class="index__box-section">
-                <% productos.forEach(producto => { %>
-                    
-                    <article class="index__box-article">
-                        <a href="/productos/detalle">
-                            <div>
-                                <img class="index__image" src="/images/<%= producto.image %>" alt="">
-                            </div>
-                            <div class="index__box-descripcion">
-                                <p><%= producto.name %></p>
-                                <div class="index__precio-descuento">
-                                    <p class="index__precio">$ <%= producto.price %></p>
-                                    <p class="index__descuento"><%= producto.discount %>% OFF</p>
-                                </div>
-                                <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                                <h5 class="index__descripcion"><%= producto.description %></h5>
-                            </div>
-                        </a>
-                    </article>
-                <% }) %>
-            
-                <!-- <article class="index__box-article">
-                    <a href="/productDetail">
-                        <div>
-                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
-                        </div>
-                        <div class="index__box-descripcion">
-                            <div class="index__precio-descuento">
-                                <p class="index__precio">$10000</p>
-                                <p class="index__descuento">10% OFF</p>
-                            </div>
-                            <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                            <h5 class="index__descripcion">Copa Mundial </h5>
-                        </div>
-                    </a>
-                </article>
+          <div class="articles_box">
 
-                <article class="index__box-article-tablet">
-                    <a href="/productDetail">
-                        <div>
-                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
-                        </div>
-                        <div class="index__box-descripcion">
-                            <div class="index__precio-descuento">
-                                <p class="index__precio">$10000</p>
-                                <p class="index__descuento">10% OFF</p>
-                            </div>
-                            <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                            <h5 class="index__descripcion">Copa Mundial </h5>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="index__box-article-desktop">
-                    <a href="/productDetail">
-                        <div>
-                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
-                        </div>
-                        <div class="index__box-descripcion">
-                            <div class="index__precio-descuento">
-                                <p class="index__precio">$10000</p>
-                                <p class="index__descuento">10% OFF</p>
-                            </div>
-                            <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                            <h5 class="index__descripcion">Copa Mundial </h5>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="index__box-article-desktop">
-                    <a href="/productDetail">
-                        <div>
-                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
-                        </div>
-                        <div class="index__box-descripcion">
-                            <div class="index__precio-descuento">
-                                <p class="index__precio">$10000</p>
-                                <p class="index__descuento">10% OFF</p>
-                            </div>
-                            <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                            <h5 class="index__descripcion">Copa Mundial </h5>
-                        </div>
-                    </a>
-                </article> -->
-            </div>
-        </section>
-        
-            <h4>Categorias</h4>
-
-        <section class="index__iconos">
-            <div class="index__iconos-group1">
-                <a href=""><i class="fa-solid fa-futbol icono"></i></a>
-                <a href=""><i class="fa-solid fa-basketball icono"></i></a>            
-                <a href=""><i class="fas fa-swimmer icono"></i></a>
-            </div>
-            <div class="index__iconos-group2">
-                <a href=""><i class="fa-solid fa-futbol icono"></i></a>
-                <a href=""><i class="fa-solid fa-basketball icono"></i></a>            
-                <a href=""><i class="fas fa-swimmer icono"></i></a>
-            </div>
-        </section>
-
-        <h4>Ofertas <i class="fa-solid fa-fire-flame-curved"></i></h4>
-        
-        <section >
-            <div class="index__box-section">
-                <article class="index__box-article">
-                    <a href="/productos/detalle">
-                        <div>
-                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
-                        </div>
-                        <div class="index__box-descripcion">
-                            <div class="index__precio-descuento">
-                                <p class="index__precio">$10000</p>
-                                <p class="index__descuento">10% OFF</p>
-                            </div>
-                            <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                            <h5 class="index__descripcion">Copa Mundial </h5>
-                        </div>
-                    </a>
-                </article>
-            
-                <article class="index__box-article">
-                    <a href="/productos/detalle">
-                        <div>
-                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
-                        </div>
-                        <div class="index__box-descripcion">
-                            <div class="index__precio-descuento">
-                                <p class="index__precio">$10000</p>
-                                <p class="index__descuento">10% OFF</p>
-                            </div>
-                            <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                            <h5 class="index__descripcion">Copa Mundial </h5>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="index__box-article-tablet">
-                    <a href="/productos/detalle">
-                        <div>
-                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
-                        </div>
-                        <div class="index__box-descripcion">
-                            <div class="index__precio-descuento">
-                                <p class="index__precio">$10000</p>
-                                <p class="index__descuento">10% OFF</p>
-                            </div>
-                            <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                            <h5 class="index__descripcion">Copa Mundial </h5>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="index__box-article-desktop">
-                    <a href="/productos/detalle">
-                        <div>
-                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
-                        </div>
-                        <div class="index__box-descripcion">
-                            <div class="index__precio-descuento">
-                                <p class="index__precio">$10000</p>
-                                <p class="index__descuento">10% OFF</p>
-                            </div>
-                            <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                            <h5 class="index__descripcion">Copa Mundial </h5>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="index__box-article-desktop">
-                    <a href="/productos/detalle">
-                        <div>
-                            <img class="index__image" src="/images/Imagenes/rugby6.jpg" alt="">
-                        </div>
-                        <div class="index__box-descripcion">
-                            <div class="index__precio-descuento">
-                                <p class="index__precio">$10000</p>
-                                <p class="index__descuento">10% OFF</p>
-                            </div>
-                            <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                            <h5 class="index__descripcion">Copa Mundial </h5>
-                        </div>
-                    </a>
-                </article>
-            </div>
-        </section>
-        <h4>Tus favoritos <i class="fa-solid fa-heart"></i></h4>
-        <section class="main__section-favoritos">
-            <div>
-                <a href="/productos/detalle">
-                    <article class="index__box-article-favoritos">
-                   
-                        <div class="index__box-image-favorito">
-                            <img class="index__image-favorito" src="/images/Imagenes/rugby6.jpg" alt="">
-                        </div>
-                        <div class="index__box-descripcion-favorito">
-                            <div class="index__precio-descuento-favorito">
-                                <p class="index__precio-favorito">$10000</p>
-                                <p class="index__descuento">10% OFF</p>
-                            </div>
-                            <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                            <h5 class="index__descripcion">Copa Mundial </h5>
-                        </div>
-                    </article>
-                </a>
-                <a href="/productos/detalle">
-                    <article class="index__box-article-favoritos">
-                   
-                        <div class="index__box-image-favorito">
-                            <img class="index__image-favorito" src="/images/Imagenes/rugby6.jpg" alt="">
-                        </div>
-                        <div class="index__box-descripcion-favorito">
-                            <div class="index__precio-descuento-favorito">
-                                <p class="index__precio-favorito">$10000</p>
-                                <p class="index__descuento">10% OFF</p>
-                            </div>
-                            <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                            <h5 class="index__descripcion">Copa Mundial </h5>
-                        </div>
-                    </article>
-                </a>
-            </div>
-            <div>
-                <a href="/productos/detalle">
-                    <article class="index__box-article-favoritos">
-                   
-                        <div class="index__box-image-favorito">
-                            <img class="index__image-favorito" src="/images/Imagenes/rugby6.jpg" alt="">
-                        </div>
-                        <div class="index__box-descripcion-favorito">
-                            <div class="index__precio-descuento-favorito">
-                                <p class="index__precio-favorito">$10000</p>
-                                <p class="index__descuento">10% OFF</p>
-                            </div>
-                            <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                            <h5 class="index__descripcion">Copa Mundial </h5>
-                        </div>
-                    </article>
-                </a>
-                <a href="/productos/detalle">
-                    <article class="index__box-article-favoritos">
-                   
-                        <div class="index__box-image-favorito">
-                            <img class="index__image-favorito" src="/images/Imagenes/rugby6.jpg" alt="">
-                        </div>
-                        <div class="index__box-descripcion-favorito">
-                            <div class="index__precio-descuento-favorito">
-                                <p class="index__precio-favorito">$10000</p>
-                                <p class="index__descuento">10% OFF</p>
-                            </div>
-                            <p class="index__envio">Envio gratis <i class="fas fa-bolt"></i></p>
-                            <h5 class="index__descripcion">Copa Mundial </h5>
-                        </div>
-                    </article>
-                </a>
-            </div>  
-        </section>
-
-        <section class="newsteller">
-            <form action="" method="POST">
-                <h3 class="home__envolope"><i class="fas fa-envelope-open-text"></i> Recibi ofertas y novedades</h3>   
-                <div class="home__input-boton"> 
-                    <input class="home__input" type="email" name="email" placeholder="Email...">
-                    <button type="submit" class="home__boton">Enviar</button>      
+            <a class="product_box" href="">
+              <div class="product_img">
+                <img src="/images/products/camiseta-maradona.jpg" alt="">
+              </div>
+              <article class="description_box">
+                <h4>Nombre del producto</h4>
+                <span>-10%</span>
+                <div class="prices">
+                  <p class="previous_price">Precio anterior</p>
+                  <p class="final_price">Precio final</p>
                 </div>
-            </form>       
-        </section>     
-    </main>
+              </article>
+            </a>
+            <a class="product_box" href="">
+              <div class="product_img">
+                <img src="/images/products/camiseta-maradona.jpg" alt="">
+              </div>
+              <article class="description_box">
+                <h4>Nombre del producto</h4>
+                <span>-10%</span>
+                <div class="prices">
+                  <p class="previous_price">Precio anterior</p>
+                  <p class="final_price">Precio final</p>
+                </div>
+              </article>
+            </a>
+            <a class="product_box" href="">
+              <div class="product_img">
+                <img src="/images/products/camiseta-maradona.jpg" alt="">
+              </div>
+              <article class="description_box">
+                <h4>Nombre del producto</h4>
+                <span>-10%</span>
+                <div class="prices">
+                  <p class="previous_price">Precio anterior</p>
+                  <p class="final_price">Precio final</p>
+                </div>
+              </article>
+            </a>
+            <a class="product_box" href="">
+              <div class="product_img">
+                <img src="/images/products/camiseta-maradona.jpg" alt="">
+              </div>
+              <article class="description_box">
+                <h4>Nombre del producto</h4>
+                <span>-10%</span>
+                <div class="prices">
+                  <p class="previous_price">Precio anterior</p>
+                  <p class="final_price">Precio final</p>
+                </div>
+              </article>
+            </a>
 
-    <!--          ------------FOOTER------------       -->
-    <%- include('./partials/footer') %> 
-    <script src="/javascript/burguer.js"></script>
-    <script src="/javascript/deploy-footer.js"></script>
-</body>
+          </div>
+        </section>
+
+        <!--    Historical moments   -->
+        <section class="items_box"> 
+          <div class="titles_box">
+            <h3 class="title_items">Los mejores momentos de la copa mundial fifa<span>tm</span></h3>
+            <a class="button_items_all" href="">Mostrar <br> todo</a>
+          </div>
+          <div class="articles_box">
+            <div class="historical_video">
+              <a href="">
+                <figure class="product_img">
+                  <img src="/images/products/pelota-mundial18b.jpg" alt="">
+                </figure>
+                <article class="description_video">
+                  <p>Fecha del momento historico</p>
+                  <div>
+                    <span><i class="fa-solid fa-heart"></i></span>
+                    <span><i class="fa-solid fa-bookmark"></i></span>
+                  </div>
+                </article>
+                <p class="description_moment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse exercitationem saepe labore vero libero magnam! Reprehenderit fugit ducimus quo beatae.</p>
+              </a>
+            </div>
+            <div class="historical_video">
+              <a href="">
+                <figure class="product_img">
+                  <img src="/images/products/pelota-mundial18b.jpg" alt="">
+                </figure>
+                <article class="description_video">
+                  <p>Fecha del momento historico</p>
+                  <div>
+                    <span><i class="fa-solid fa-heart"></i></span>
+                    <span><i class="fa-solid fa-bookmark"></i></span>
+                  </div>
+                </article>
+                <p class="description_moment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse exercitationem saepe labore vero libero magnam! Reprehenderit fugit ducimus quo beatae.</p>
+              </a>
+            </div>
+            <div class="historical_video">
+              <a href="">
+                <figure class="product_img">
+                  <img src="/images/products/pelota-mundial18b.jpg" alt="">
+                </figure>
+                <article class="description_video">
+                  <p>Fecha del momento historico</p>
+                  <div>
+                    <span><i class="fa-solid fa-heart"></i></span>
+                    <span><i class="fa-solid fa-bookmark"></i></span>
+                  </div>
+                </article>
+                <p class="description_moment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse exercitationem saepe labore vero libero magnam! Reprehenderit fugit ducimus quo beatae.</p>
+              </a>
+            </div>
+            <div class="historical_video">
+              <a href="">
+                <figure class="product_img">
+                  <iframe src="https://www.youtube.com/embed/0IL6o8gfbgI" title="Diego Maradona in World Cup 86 is the Highest level a player has ever had – Unstoppable" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </figure>
+                <article class="description_video">
+                  <p>Fecha del momento historico</p>
+                  <div>
+                    <span><i class="fa-solid fa-heart"></i></span>
+                    <span><i class="fa-solid fa-bookmark"></i></span>
+                  </div>
+                </article>
+                <p class="description_moment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse exercitationem saepe labore vero libero magnam! Reprehenderit fugit ducimus quo beatae.</p>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!--    Currents famous players  -->
+        <section class="items_box">
+          <div class="titles_box">
+            <h3 class="title_items">jugadores famosos actuales</h3>
+            <a class="button_items_all" href="">Mostrar <br> todo</a>
+          </div>
+          <div class="articles_box">
+            <div class="product_box_famous">
+              <a href="">
+                <div class="product_img">
+                  <img src="/images/players/lio-messi.png" alt="">
+                  <div class="img__back"></div>
+                </div>
+                <div class="description_box">
+                  <h4 class="player_name">Nombre del deportista</h4>
+                  <p class="player_description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, non
+                    dicta
+                    deleniti mollitia voluptate cum repellat nisi amet ipsa accusamus.</p>
+                  <a class="more" href="">Saber mas</a>
+                </div>
+              </a>
+            </div>
+            <div class="product_box_famous">
+              <a href="">
+                <div class="product_img">
+                  <img src="/images/players/cris-ronaldo.png" alt="">
+                  <div class="img__back"></div>
+                </div>
+                <article class="description_box">
+                  <h4 class="player_name">Nombre del deportista</h4>
+                  <p class="player_description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, non
+                    dicta
+                    deleniti mollitia voluptate cum repellat nisi amet ipsa accusamus.</p>
+                  <a class="more" href="">Saber mas</a>
+                </article>
+              </a>
+            </div>
+            <div class="product_box_famous">
+              <a href="">
+                <div class="product_img">
+                  <img src="/images/players/neymar.png" alt="">
+                  <div class="img__back"></div>
+                </div>
+                <article class="description_box">
+                  <h4 class="player_name">Nombre del deportista</h4>
+                  <p class="player_description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, non
+                    dicta
+                    deleniti mollitia voluptate cum repellat nisi amet ipsa accusamus.</p>
+                  <a class="more" href="">Saber mas</a>
+                </article>
+              </a>
+            </div>
+            <div class="product_box_famous">
+              <a href="">
+                <div class="product_img">
+                  <img src="/images/players/kylian-mbappe.png" alt="">
+                  <div class="img__back"></div>
+                </div>
+                <article class="description_box">
+                  <h4 class="player_name">Nombre del deportista</h4>
+                  <p class="player_description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, non
+                    dicta
+                    deleniti mollitia voluptate cum repellat nisi amet ipsa accusamus.</p>
+                  <a class="more" href="">Saber mas</a>
+                </article>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!--    Products in-sale    -->
+        <section class="items_box">
+          <div class="titles_box">
+            <h3 class="title_items">ofertas</h3>
+            <a class="button_items_all" href="">Mostrar <br> todo</a>
+          </div>
+          <div class="articles_box">
+            <a class="product_box" href="">
+              <div class="product_img">
+                <img src="/images/products/camiseta-maradona.jpg" alt="">
+              </div>
+              <article class="description_box">
+                <h4>Nombre del producto</h4>
+                <span>-10%</span>
+                <div class="prices">
+                  <p class="previous_price">Precio anterior</p>
+                  <p class="final_price">Precio final</p>
+                </div>
+              </article>
+            </a>
+            <a class="product_box" href="">
+              <div class="product_img">
+                <img src="/images/products/camiseta-maradona.jpg" alt="">
+              </div>
+              <article class="description_box">
+                <h4>Nombre del producto</h4>
+                <span>-10%</span>
+                <div class="prices">
+                  <p class="previous_price">Precio anterior</p>
+                  <p class="final_price">Precio final</p>
+                </div>
+              </article>
+            </a>
+            <a class="product_box" href="">
+              <div class="product_img">
+                <img src="/images/products/camiseta-maradona.jpg" alt="">
+              </div>
+              <article class="description_box">
+                <h4>Nombre del producto</h4>
+                <span>-10%</span>
+                <div class="prices">
+                  <p class="previous_price">Precio anterior</p>
+                  <p class="final_price">Precio final</p>
+                </div>
+              </article>
+            </a>
+            <a class="product_box" href="">
+              <div class="product_img">
+                <img src="/images/products/camiseta-maradona.jpg" alt="">
+              </div>
+              <article class="description_box">
+                <h4>Nombre del producto</h4>
+                <span>-10%</span>
+                <div class="prices">
+                  <p class="previous_price">Precio anterior</p>
+                  <p class="final_price">Precio final</p>
+                </div>
+              </article>
+            </a>
+          </div>
+        </section>
+      </main>
+      <!--          ------------FOOTER------------       -->
+      <%- include('./partials/footer') %>
+        <script src="/javascript/burguer.js"></script>
+        <script src="/javascript/bannerIndex.js"></script>
+        <script src="/javascript/deploy-footer.js"></script>
+  </body>
 
 </html>
